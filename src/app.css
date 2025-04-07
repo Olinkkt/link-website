@@ -1,0 +1,69 @@
+:root {
+  /* Color scheme - Dark theme with neon accents */
+  --primary: #E0E0E0;
+  --secondary: #A0A0A0;
+  --accent: #61DAFB;
+  --accent-secondary: #00FF00;
+  --background: #0D1117;
+  --surface: #1E1E1E;
+  --surface-lighter: #2D2D2D;
+  --card-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -1px rgba(0, 0, 0, 0.1);
+  
+  /* Typography */
+  font-family: 'JetBrains Mono', monospace;
+  line-height: 1.5;
+  font-weight: 400;
+  
+  color: var(--primary);
+  background-color: var(--background);
+  
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: 
+    linear-gradient(to bottom, transparent 0%, var(--background) 100%),
+    repeating-linear-gradient(
+      transparent 0px,
+      transparent 2px,
+      rgba(97, 218, 251, 0.03) 3px,
+      transparent 3px,
+      transparent 32px
+    );
+}
+
+#app {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+::selection {
+  background: var(--accent);
+  color: var(--background);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 1rem;
+  }
+}
